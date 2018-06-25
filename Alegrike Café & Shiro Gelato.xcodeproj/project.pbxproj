@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8EA555F06C7799897A6D5B96 /* Pods_Alegrike_Cafe____Shiro_Gelato.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1214B221C0960DFB52B824 /* Pods_Alegrike_Cafe____Shiro_Gelato.framework */; };
+		942188B42084702A00E03686 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942188B32084702A00E03686 /* AppDelegate.swift */; };
+		942188B92084702A00E03686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942188B72084702A00E03686 /* Main.storyboard */; };
+		942188BB2084702A00E03686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942188BA2084702A00E03686 /* Assets.xcassets */; };
+		942188BE2084702A00E03686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942188BC2084702A00E03686 /* LaunchScreen.storyboard */; };
+		942188CA20847B2F00E03686 /* VC_Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942188C920847B2F00E03686 /* VC_Menu.swift */; };
+		942188CD20847BA600E03686 /* VC_Sucursales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942188CC20847BA600E03686 /* VC_Sucursales.swift */; };
+		942188D020847BDE00E03686 /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942188CF20847BDE00E03686 /* VC_Login.swift */; };
+		942188D220847D3900E03686 /* VC_Carrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942188D120847D3900E03686 /* VC_Carrito.swift */; };
+		942188D420847F3100E03686 /* logo_Alegrike.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 942188D320847F3100E03686 /* logo_Alegrike.jpg */; };
+		9434CFAA20BE310800308616 /* DropButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434CFA920BE310800308616 /* DropButton.swift */; };
+		944495E120D06EAE00272BFB /* M_Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944495E020D06EAE00272BFB /* M_Basket.swift */; };
+		9444CA4620873B3C0075B8C2 /* VC_CrearCuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444CA4520873B3C0075B8C2 /* VC_CrearCuenta.swift */; };
+		9444CA4E20874E660075B8C2 /* basket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9444CA4D20874E660075B8C2 /* basket@2x.png */; };
+		9444CA502087666E0075B8C2 /* shopping-cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9444CA4F2087666E0075B8C2 /* shopping-cart@2x.png */; };
+		9444CA52208766E80075B8C2 /* man-7-tapped.png in Resources */ = {isa = PBXBuildFile; fileRef = 9444CA51208766E80075B8C2 /* man-7-tapped.png */; };
+		9444CA54208766F00075B8C2 /* man-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9444CA53208766F00075B8C2 /* man-7@2x.png */; };
+		9444CA56208771220075B8C2 /* plus-sign@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9444CA55208771210075B8C2 /* plus-sign@2x.png */; };
+		9444CA58208779FA0075B8C2 /* CC_Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444CA57208779FA0075B8C2 /* CC_Menu.swift */; };
+		9444CA5A20877A130075B8C2 /* TC_Carrito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9444CA5920877A130075B8C2 /* TC_Carrito.swift */; };
+		9476427820BD5FE300345627 /* Extras.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9476427320BD5FDF00345627 /* Extras.jpg */; };
+		9476427920BD5FE300345627 /* Shiro_word.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9476427420BD5FE000345627 /* Shiro_word.jpg */; };
+		9476427A20BD5FE300345627 /* Frio.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9476427520BD5FE000345627 /* Frio.jpg */; };
+		9476427B20BD5FE300345627 /* Comida.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9476427620BD5FE100345627 /* Comida.jpg */; };
+		9476427C20BD5FE300345627 /* Caliente.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9476427720BD5FE200345627 /* Caliente.jpg */; };
+		9476427E20BD614F00345627 /* TV_MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476427D20BD614F00345627 /* TV_MenuCell.swift */; };
+		9476428020BD786600345627 /* VC_Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9476427F20BD786600345627 /* VC_Detail.swift */; };
+		94E3733E20B916CF00AE682A /* accept@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94E3733D20B916CF00AE682A /* accept@2x.png */; };
+		94E3734020B917C800AE682A /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94E3733F20B917C700AE682A /* error@2x.png */; };
+		94E3734220B9534E00AE682A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E3734120B9534E00AE682A /* Extensions.swift */; };
+		94E3734420B95CE400AE682A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94E3734320B95CE400AE682A /* GoogleService-Info.plist */; };
+		94E3734A20B9635500AE682A /* M_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E3734920B9635500AE682A /* M_User.swift */; };
+		94E3734C20BBC59800AE682A /* M_Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E3734B20BBC59800AE682A /* M_Product.swift */; };
+		94E3734E20BC155600AE682A /* H_CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E3734D20BC155600AE682A /* H_CollectionReusableView.swift */; };
+		94E3735220BCC92300AE682A /* TVC_Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E3735120BCC92300AE682A /* TVC_Menu.swift */; };
+		94E3735420BCD21400AE682A /* ipsum.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94E3735320BCD21400AE682A /* ipsum.jpg */; };
+		94E3735620BCD21900AE682A /* yumaya.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94E3735520BCD21900AE682A /* yumaya.jpg */; };
+		94F5FD0620C29326005B5B23 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5FD0520C29326005B5B23 /* MyCell.swift */; };
+		94F5FD0820C29390005B5B23 /* MyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F5FD0720C29390005B5B23 /* MyCell.xib */; };
+		94F5FD0A20C34A8B005B5B23 /* TVC_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5FD0920C34A8B005B5B23 /* TVC_Category.swift */; };
+		94F5FD0C20C34ABE005B5B23 /* TV_CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5FD0B20C34ABE005B5B23 /* TV_CategoryCell.swift */; };
+		94F5FD0E20C34BA5005B5B23 /* more-list-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F5FD0D20C34BA5005B5B23 /* more-list-7@2x.png */; };
+		94F5FD1020C647FF005B5B23 /* checkbox-square-unchecked-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F5FD0F20C647FE005B5B23 /* checkbox-square-unchecked-512.png */; };
+		94FD06B620DB8A4800A07890 /* shiro1.png in Resources */ = {isa = PBXBuildFile; fileRef = 94FD06B520DB8A4700A07890 /* shiro1.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C1214B221C0960DFB52B824 /* Pods_Alegrike_Cafe____Shiro_Gelato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Alegrike_Cafe____Shiro_Gelato.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ACDE59A95974EFE03CDB4B5 /* Pods-Alegrike Café & Shiro Gelato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alegrike Café & Shiro Gelato.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato.debug.xcconfig"; sourceTree = "<group>"; };
+		942188B02084702A00E03686 /* Alegrike Café & Shiro Gelato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alegrike Café & Shiro Gelato.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		942188B32084702A00E03686 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		942188B82084702A00E03686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		942188BA2084702A00E03686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		942188BD2084702A00E03686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		942188BF2084702A00E03686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942188C920847B2F00E03686 /* VC_Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Menu.swift; sourceTree = "<group>"; };
+		942188CC20847BA600E03686 /* VC_Sucursales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Sucursales.swift; sourceTree = "<group>"; };
+		942188CF20847BDE00E03686 /* VC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Login.swift; sourceTree = "<group>"; };
+		942188D120847D3900E03686 /* VC_Carrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Carrito.swift; sourceTree = "<group>"; };
+		942188D320847F3100E03686 /* logo_Alegrike.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_Alegrike.jpg; sourceTree = "<group>"; };
+		9434CFA920BE310800308616 /* DropButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropButton.swift; sourceTree = "<group>"; };
+		944495E020D06EAE00272BFB /* M_Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Basket.swift; sourceTree = "<group>"; };
+		9444CA4520873B3C0075B8C2 /* VC_CrearCuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_CrearCuenta.swift; sourceTree = "<group>"; };
+		9444CA4D20874E660075B8C2 /* basket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basket@2x.png"; sourceTree = "<group>"; };
+		9444CA4F2087666E0075B8C2 /* shopping-cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping-cart@2x.png"; sourceTree = "<group>"; };
+		9444CA51208766E80075B8C2 /* man-7-tapped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man-7-tapped.png"; sourceTree = "<group>"; };
+		9444CA53208766F00075B8C2 /* man-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "man-7@2x.png"; sourceTree = "<group>"; };
+		9444CA55208771210075B8C2 /* plus-sign@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-sign@2x.png"; sourceTree = "<group>"; };
+		9444CA57208779FA0075B8C2 /* CC_Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CC_Menu.swift; sourceTree = "<group>"; };
+		9444CA5920877A130075B8C2 /* TC_Carrito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TC_Carrito.swift; sourceTree = "<group>"; };
+		9476427320BD5FDF00345627 /* Extras.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Extras.jpg; sourceTree = "<group>"; };
+		9476427420BD5FE000345627 /* Shiro_word.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shiro_word.jpg; sourceTree = "<group>"; };
+		9476427520BD5FE000345627 /* Frio.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frio.jpg; sourceTree = "<group>"; };
+		9476427620BD5FE100345627 /* Comida.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Comida.jpg; sourceTree = "<group>"; };
+		9476427720BD5FE200345627 /* Caliente.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Caliente.jpg; sourceTree = "<group>"; };
+		9476427D20BD614F00345627 /* TV_MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_MenuCell.swift; sourceTree = "<group>"; };
+		9476427F20BD786600345627 /* VC_Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Detail.swift; sourceTree = "<group>"; };
+		94E3733C20B6623500AE682A /* Alegrike Café & Shiro Gelato.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Alegrike Café & Shiro Gelato.entitlements"; sourceTree = "<group>"; };
+		94E3733D20B916CF00AE682A /* accept@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accept@2x.png"; sourceTree = "<group>"; };
+		94E3733F20B917C700AE682A /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
+		94E3734120B9534E00AE682A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		94E3734320B95CE400AE682A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94E3734920B9635500AE682A /* M_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_User.swift; sourceTree = "<group>"; };
+		94E3734B20BBC59800AE682A /* M_Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M_Product.swift; sourceTree = "<group>"; };
+		94E3734D20BC155600AE682A /* H_CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H_CollectionReusableView.swift; sourceTree = "<group>"; };
+		94E3735120BCC92300AE682A /* TVC_Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVC_Menu.swift; sourceTree = "<group>"; };
+		94E3735320BCD21400AE682A /* ipsum.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ipsum.jpg; sourceTree = "<group>"; };
+		94E3735520BCD21900AE682A /* yumaya.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yumaya.jpg; sourceTree = "<group>"; };
+		94F5FD0520C29326005B5B23 /* MyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		94F5FD0720C29390005B5B23 /* MyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCell.xib; sourceTree = "<group>"; };
+		94F5FD0920C34A8B005B5B23 /* TVC_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVC_Category.swift; sourceTree = "<group>"; };
+		94F5FD0B20C34ABE005B5B23 /* TV_CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TV_CategoryCell.swift; sourceTree = "<group>"; };
+		94F5FD0D20C34BA5005B5B23 /* more-list-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more-list-7@2x.png"; sourceTree = "<group>"; };
+		94F5FD0F20C647FE005B5B23 /* checkbox-square-unchecked-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-square-unchecked-512.png"; sourceTree = "<group>"; };
+		94FD06B520DB8A4700A07890 /* shiro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shiro1.png; sourceTree = "<group>"; };
+		C9A8940D101D3AC12AEF1F40 /* Pods-Alegrike Café & Shiro Gelato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alegrike Café & Shiro Gelato.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		942188AD2084702A00E03686 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EA555F06C7799897A6D5B96 /* Pods_Alegrike_Cafe____Shiro_Gelato.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91C926838C86FE5DAD1A25F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2ACDE59A95974EFE03CDB4B5 /* Pods-Alegrike Café & Shiro Gelato.debug.xcconfig */,
+				C9A8940D101D3AC12AEF1F40 /* Pods-Alegrike Café & Shiro Gelato.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		942188A72084702A00E03686 = {
+			isa = PBXGroup;
+			children = (
+				942188B22084702A00E03686 /* Alegrike Café & Shiro Gelato */,
+				942188B12084702A00E03686 /* Products */,
+				91C926838C86FE5DAD1A25F7 /* Pods */,
+				FD5827131AD5939B08405C68 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		942188B12084702A00E03686 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				942188B02084702A00E03686 /* Alegrike Café & Shiro Gelato.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		942188B22084702A00E03686 /* Alegrike Café & Shiro Gelato */ = {
+			isa = PBXGroup;
+			children = (
+				942188D520847F3500E03686 /* Images */,
+				942188CE20847BC700E03686 /* User */,
+				942188CB20847B8300E03686 /* Menú */,
+				942188C720847A7E00E03686 /* Sucursales */,
+				942188C62084705500E03686 /* Supporting Files */,
+				942188B72084702A00E03686 /* Main.storyboard */,
+				94F5FD0720C29390005B5B23 /* MyCell.xib */,
+				942188BA2084702A00E03686 /* Assets.xcassets */,
+				942188BC2084702A00E03686 /* LaunchScreen.storyboard */,
+				942188BF2084702A00E03686 /* Info.plist */,
+				94E3734320B95CE400AE682A /* GoogleService-Info.plist */,
+			);
+			path = "Alegrike Café & Shiro Gelato";
+			sourceTree = "<group>";
+		};
+		942188C62084705500E03686 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94E3733C20B6623500AE682A /* Alegrike Café & Shiro Gelato.entitlements */,
+				942188B32084702A00E03686 /* AppDelegate.swift */,
+				94E3734120B9534E00AE682A /* Extensions.swift */,
+				9434CFA920BE310800308616 /* DropButton.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		942188C720847A7E00E03686 /* Sucursales */ = {
+			isa = PBXGroup;
+			children = (
+				942188CC20847BA600E03686 /* VC_Sucursales.swift */,
+			);
+			path = Sucursales;
+			sourceTree = "<group>";
+		};
+		942188CB20847B8300E03686 /* Menú */ = {
+			isa = PBXGroup;
+			children = (
+				94E3734B20BBC59800AE682A /* M_Product.swift */,
+				944495E020D06EAE00272BFB /* M_Basket.swift */,
+				9444CA57208779FA0075B8C2 /* CC_Menu.swift */,
+				94E3734D20BC155600AE682A /* H_CollectionReusableView.swift */,
+				942188C920847B2F00E03686 /* VC_Menu.swift */,
+				9476427D20BD614F00345627 /* TV_MenuCell.swift */,
+				94E3735120BCC92300AE682A /* TVC_Menu.swift */,
+				9476427F20BD786600345627 /* VC_Detail.swift */,
+				94F5FD0B20C34ABE005B5B23 /* TV_CategoryCell.swift */,
+				94F5FD0920C34A8B005B5B23 /* TVC_Category.swift */,
+				94F5FD0520C29326005B5B23 /* MyCell.swift */,
+				9444CA5B20877A200075B8C2 /* Carrito */,
+			);
+			name = "Menú";
+			path = "Menú";
+			sourceTree = "<group>";
+		};
+		942188CE20847BC700E03686 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				94E3734920B9635500AE682A /* M_User.swift */,
+				942188CF20847BDE00E03686 /* VC_Login.swift */,
+				9444CA4520873B3C0075B8C2 /* VC_CrearCuenta.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		942188D520847F3500E03686 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				94FD06B520DB8A4700A07890 /* shiro1.png */,
+				94F5FD0F20C647FE005B5B23 /* checkbox-square-unchecked-512.png */,
+				94F5FD0D20C34BA5005B5B23 /* more-list-7@2x.png */,
+				9476427720BD5FE200345627 /* Caliente.jpg */,
+				9476427620BD5FE100345627 /* Comida.jpg */,
+				9476427320BD5FDF00345627 /* Extras.jpg */,
+				9476427520BD5FE000345627 /* Frio.jpg */,
+				9476427420BD5FE000345627 /* Shiro_word.jpg */,
+				94E3735320BCD21400AE682A /* ipsum.jpg */,
+				94E3735520BCD21900AE682A /* yumaya.jpg */,
+				94E3733F20B917C700AE682A /* error@2x.png */,
+				94E3733D20B916CF00AE682A /* accept@2x.png */,
+				942188D320847F3100E03686 /* logo_Alegrike.jpg */,
+				9444CA4D20874E660075B8C2 /* basket@2x.png */,
+				9444CA4F2087666E0075B8C2 /* shopping-cart@2x.png */,
+				9444CA55208771210075B8C2 /* plus-sign@2x.png */,
+				9444CA51208766E80075B8C2 /* man-7-tapped.png */,
+				9444CA53208766F00075B8C2 /* man-7@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9444CA5B20877A200075B8C2 /* Carrito */ = {
+			isa = PBXGroup;
+			children = (
+				9444CA5920877A130075B8C2 /* TC_Carrito.swift */,
+				942188D120847D3900E03686 /* VC_Carrito.swift */,
+			);
+			path = Carrito;
+			sourceTree = "<group>";
+		};
+		FD5827131AD5939B08405C68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1214B221C0960DFB52B824 /* Pods_Alegrike_Cafe____Shiro_Gelato.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		942188AF2084702A00E03686 /* Alegrike Café & Shiro Gelato */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942188C22084702A00E03686 /* Build configuration list for PBXNativeTarget "Alegrike Café & Shiro Gelato" */;
+			buildPhases = (
+				DA335D4338B9C0EEC803C975 /* [CP] Check Pods Manifest.lock */,
+				942188AC2084702A00E03686 /* Sources */,
+				942188AD2084702A00E03686 /* Frameworks */,
+				942188AE2084702A00E03686 /* Resources */,
+				6EB67FC881A576FDE432004D /* [CP] Embed Pods Frameworks */,
+				29111DE6F46BE21BA11AD7B2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alegrike Café & Shiro Gelato";
+			productName = "Alegrike Café & Shiro Gelato";
+			productReference = 942188B02084702A00E03686 /* Alegrike Café & Shiro Gelato.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		942188A82084702A00E03686 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = AkibaTeaParty;
+				TargetAttributes = {
+					942188AF2084702A00E03686 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 942188AB2084702A00E03686 /* Build configuration list for PBXProject "Alegrike Café & Shiro Gelato" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 942188A72084702A00E03686;
+			productRefGroup = 942188B12084702A00E03686 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				942188AF2084702A00E03686 /* Alegrike Café & Shiro Gelato */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		942188AE2084702A00E03686 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9476427B20BD5FE300345627 /* Comida.jpg in Resources */,
+				94E3734020B917C800AE682A /* error@2x.png in Resources */,
+				9476427C20BD5FE300345627 /* Caliente.jpg in Resources */,
+				94E3735620BCD21900AE682A /* yumaya.jpg in Resources */,
+				942188BE2084702A00E03686 /* LaunchScreen.storyboard in Resources */,
+				9444CA54208766F00075B8C2 /* man-7@2x.png in Resources */,
+				942188BB2084702A00E03686 /* Assets.xcassets in Resources */,
+				9444CA502087666E0075B8C2 /* shopping-cart@2x.png in Resources */,
+				9444CA56208771220075B8C2 /* plus-sign@2x.png in Resources */,
+				94E3733E20B916CF00AE682A /* accept@2x.png in Resources */,
+				94E3735420BCD21400AE682A /* ipsum.jpg in Resources */,
+				94E3734420B95CE400AE682A /* GoogleService-Info.plist in Resources */,
+				94F5FD0E20C34BA5005B5B23 /* more-list-7@2x.png in Resources */,
+				9476427820BD5FE300345627 /* Extras.jpg in Resources */,
+				942188B92084702A00E03686 /* Main.storyboard in Resources */,
+				94F5FD1020C647FF005B5B23 /* checkbox-square-unchecked-512.png in Resources */,
+				9444CA52208766E80075B8C2 /* man-7-tapped.png in Resources */,
+				94FD06B620DB8A4800A07890 /* shiro1.png in Resources */,
+				9476427A20BD5FE300345627 /* Frio.jpg in Resources */,
+				94F5FD0820C29390005B5B23 /* MyCell.xib in Resources */,
+				9476427920BD5FE300345627 /* Shiro_word.jpg in Resources */,
+				942188D420847F3100E03686 /* logo_Alegrike.jpg in Resources */,
+				9444CA4E20874E660075B8C2 /* basket@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29111DE6F46BE21BA11AD7B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EB67FC881A576FDE432004D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Alegrike Café & Shiro Gelato/Pods-Alegrike Café & Shiro Gelato-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA335D4338B9C0EEC803C975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alegrike Café & Shiro Gelato-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		942188AC2084702A00E03686 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9444CA4620873B3C0075B8C2 /* VC_CrearCuenta.swift in Sources */,
+				94E3735220BCC92300AE682A /* TVC_Menu.swift in Sources */,
+				9434CFAA20BE310800308616 /* DropButton.swift in Sources */,
+				942188D220847D3900E03686 /* VC_Carrito.swift in Sources */,
+				9444CA58208779FA0075B8C2 /* CC_Menu.swift in Sources */,
+				9476428020BD786600345627 /* VC_Detail.swift in Sources */,
+				9476427E20BD614F00345627 /* TV_MenuCell.swift in Sources */,
+				942188CA20847B2F00E03686 /* VC_Menu.swift in Sources */,
+				942188CD20847BA600E03686 /* VC_Sucursales.swift in Sources */,
+				94E3734E20BC155600AE682A /* H_CollectionReusableView.swift in Sources */,
+				9444CA5A20877A130075B8C2 /* TC_Carrito.swift in Sources */,
+				944495E120D06EAE00272BFB /* M_Basket.swift in Sources */,
+				94E3734C20BBC59800AE682A /* M_Product.swift in Sources */,
+				942188D020847BDE00E03686 /* VC_Login.swift in Sources */,
+				942188B42084702A00E03686 /* AppDelegate.swift in Sources */,
+				94F5FD0620C29326005B5B23 /* MyCell.swift in Sources */,
+				94E3734220B9534E00AE682A /* Extensions.swift in Sources */,
+				94E3734A20B9635500AE682A /* M_User.swift in Sources */,
+				94F5FD0A20C34A8B005B5B23 /* TVC_Category.swift in Sources */,
+				94F5FD0C20C34ABE005B5B23 /* TV_CategoryCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		942188B72084702A00E03686 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942188B82084702A00E03686 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		942188BC2084702A00E03686 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942188BD2084702A00E03686 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		942188C02084702A00E03686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		942188C12084702A00E03686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		942188C32084702A00E03686 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ACDE59A95974EFE03CDB4B5 /* Pods-Alegrike Café & Shiro Gelato.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Alegrike Café & Shiro Gelato/Alegrike Café & Shiro Gelato.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GG355RASR;
+				INFOPLIST_FILE = "Alegrike Café & Shiro Gelato/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AkibaTeaParty.Alegrike-Cafe-Shiro-Gelato";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		942188C42084702A00E03686 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A8940D101D3AC12AEF1F40 /* Pods-Alegrike Café & Shiro Gelato.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Alegrike Café & Shiro Gelato/Alegrike Café & Shiro Gelato.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GG355RASR;
+				INFOPLIST_FILE = "Alegrike Café & Shiro Gelato/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AkibaTeaParty.Alegrike-Cafe-Shiro-Gelato";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		942188AB2084702A00E03686 /* Build configuration list for PBXProject "Alegrike Café & Shiro Gelato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942188C02084702A00E03686 /* Debug */,
+				942188C12084702A00E03686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942188C22084702A00E03686 /* Build configuration list for PBXNativeTarget "Alegrike Café & Shiro Gelato" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942188C32084702A00E03686 /* Debug */,
+				942188C42084702A00E03686 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 942188A82084702A00E03686 /* Project object */;
+}

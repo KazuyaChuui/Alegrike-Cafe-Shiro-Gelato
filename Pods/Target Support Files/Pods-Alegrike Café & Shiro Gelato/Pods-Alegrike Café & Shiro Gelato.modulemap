@@ -1,0 +1,6 @@
+framework module Pods_Alegrike_Cafe____Shiro_Gelato {
+  umbrella header "Pods-Alegrike Café & Shiro Gelato-umbrella.h"
+
+  export *
+  module * { export * }
+}
