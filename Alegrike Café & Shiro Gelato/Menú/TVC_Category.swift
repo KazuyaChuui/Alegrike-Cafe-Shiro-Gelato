@@ -22,6 +22,7 @@ class TVC_Category: UITableViewController {
     let rightButtonDropDown = DropDown()
     var menuType: String = ""
     var categories: [String] = [String]()
+    var sucursal: String = ""
     let colorsHot: [UIColor] = [#colorLiteral(red: 0.9294117647, green: 0.8666666667, blue: 0.6588235294, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.7176470588, blue: 0.5490196078, alpha: 1),#colorLiteral(red: 0.9294117647, green: 0.8666666667, blue: 0.6588235294, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.7176470588, blue: 0.5490196078, alpha: 1),#colorLiteral(red: 0.9294117647, green: 0.8666666667, blue: 0.6588235294, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.7176470588, blue: 0.5490196078, alpha: 1),#colorLiteral(red: 0.9294117647, green: 0.8666666667, blue: 0.6588235294, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.7176470588, blue: 0.5490196078, alpha: 1),#colorLiteral(red: 0.9294117647, green: 0.8666666667, blue: 0.6588235294, alpha: 1),#colorLiteral(red: 0.8588235294, green: 0.7176470588, blue: 0.5490196078, alpha: 1)]
     let colorsCold: [UIColor] = [#colorLiteral(red: 0.9843137255, green: 0.7450980392, blue: 0.8274509804, alpha: 1),#colorLiteral(red: 0.7529411765, green: 0.9333333333, blue: 0.8078431373, alpha: 1),#colorLiteral(red: 0.968627451, green: 0.9215686275, blue: 0.6901960784, alpha: 1),#colorLiteral(red: 0.9490196078, green: 0.7490196078, blue: 0.4901960784, alpha: 1),#colorLiteral(red: 0.6117647059, green: 0.3803921569, blue: 0.262745098, alpha: 1),#colorLiteral(red: 0.9843137255, green: 0.7450980392, blue: 0.8274509804, alpha: 1),#colorLiteral(red: 0.7529411765, green: 0.9333333333, blue: 0.8078431373, alpha: 1),#colorLiteral(red: 0.968627451, green: 0.9215686275, blue: 0.6901960784, alpha: 1),#colorLiteral(red: 0.9490196078, green: 0.7490196078, blue: 0.4901960784, alpha: 1),#colorLiteral(red: 0.6117647059, green: 0.3803921569, blue: 0.262745098, alpha: 1)]
     
@@ -30,6 +31,7 @@ class TVC_Category: UITableViewController {
         self.title = "Menú \(menuType)"
         categoryCount()
         setupRightBarDropDown()
+        sucursal = (items[0].ref?.parent?.key)!
         rightButtonDropDown.dismissMode = .automatic
         rightButtonDropDown.direction = .bottom
         customizeDropDown(self)
@@ -154,6 +156,9 @@ class TVC_Category: UITableViewController {
             let index = (sender as! NSIndexPath)
             vc.items = items
             vc.categoryType = categories[index.row]
+        } else if segue.identifier == "canastaSegue" {
+            let vc = segue.destination as! VC_Carrito
+            vc.sucursal = sucursal
         }
     }
     

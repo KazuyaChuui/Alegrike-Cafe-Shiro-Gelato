@@ -49,6 +49,7 @@ class VC_Detail: UIViewController {
     var extra: String = ""
     var autoId = ""
     var total = 0
+    var sucursal = ""
     
     lazy var dropDowns: [DropDown] = {
         return [
@@ -67,6 +68,7 @@ class VC_Detail: UIViewController {
         let imageRef = storageRef.child("\(product.name).png")
         imageProduct.sd_setImage(with: imageRef)
         setupDropdowns()
+        sucursal = (product.ref?.parent?.key)!
         nameProduct.text = product.subCategory
         descriptionProduct.text = product.description
         categoryProduct.text = product.name
@@ -87,7 +89,7 @@ class VC_Detail: UIViewController {
         addtoCartArray()
         let vc = storyboard?.instantiateViewController(withIdentifier: "canasta") as! VC_Carrito
         vc.ref = (product.ref?.database.reference())!
-        vc.sucursal = (product.ref?.parent?.key)!
+        vc.sucursal = sucursal
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -118,7 +120,11 @@ class VC_Detail: UIViewController {
         let mail = components.removeFirst()
         total = (self.product.price + model.sizePrice + model.extraPrice + model.milkPrice) * model.quantityPrice
         productDict.append(M_Basket(name: product.name, category: product.category, price: total, quantity: model.quantityPrice, size: size, options: optionals, extra: extra, user: user.displayName!, mail: mail, email: email, isClosed: false).toAnyObject())
-        productOrder.append(M_Basket(name: product.name, category: product.category, price: total, quantity: model.quantityPrice, size: size, options: optionals, extra: extra, user: user.displayName!, mail: mail, email: email, isClosed: false))
+        if self.sucursal == "Yumaya" {
+            productOrderYumaya.append(M_Basket(name: product.name, category: product.category, price: total, quantity: model.quantityPrice, size: size, options: optionals, extra: extra, user: user.displayName!, mail: mail, email: email, isClosed: false))
+        } else if self.sucursal == "Ipsum" {
+            productOrderIpsum.append(M_Basket(name: product.name, category: product.category, price: total, quantity: model.quantityPrice, size: size, options: optionals, extra: extra, user: user.displayName!, mail: mail, email: email, isClosed: false))
+        }
         
     }
     
@@ -431,15 +437,14 @@ class VC_Detail: UIViewController {
         }
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "canastaSegue" {
+            let vc = segue.destination as! VC_Carrito
+            vc.sucursal = sucursal
+        }
     }
-    */
 
 }
 

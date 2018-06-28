@@ -17,6 +17,7 @@ class VC_Menu: UIViewController {
     
     var items = [M_Product]()
     var filtered = [M_Product]()
+    var sucursal: String = ""
     var categoryType: String = ""
     let reuseIdentifier = "menuCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
@@ -32,6 +33,7 @@ class VC_Menu: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         presentView()
         setupRightBarDropDown()
+        sucursal = (items[0].ref?.parent?.key)!
         rightButtonDropDown.dismissMode = .automatic
         rightButtonDropDown.direction = .bottom
         customizeDropDown(self)
@@ -160,6 +162,9 @@ extension VC_Menu: UICollectionViewDataSource, UICollectionViewDelegate {
             
         } else if segue.identifier == "basket" {
             
+        } else if segue.identifier == "canastaSegue" {
+            let vc = segue.destination as! VC_Carrito
+            vc.sucursal = sucursal
         }
     }
 }

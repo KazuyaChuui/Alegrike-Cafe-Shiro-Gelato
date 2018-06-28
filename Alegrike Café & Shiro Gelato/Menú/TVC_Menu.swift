@@ -176,7 +176,9 @@ class TVC_Menu: UITableViewController {
                 vc.items = items.filter { $0.menu == "Extras" }
                 vc.categoryType = "single"
             }
-
+        } else if segue.identifier == "canastaSegue" {
+            let vc = segue.destination as! VC_Carrito
+            vc.sucursal = sucursal
         }
     }
 

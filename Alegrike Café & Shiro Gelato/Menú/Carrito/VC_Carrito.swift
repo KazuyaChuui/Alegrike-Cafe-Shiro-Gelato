@@ -27,7 +27,11 @@ class VC_Carrito: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        items = productOrder
+        if self.sucursal == "Yumaya" {
+            items = productOrderYumaya
+        } else if self.sucursal == "Ipsum" {
+            items = productOrderIpsum
+        }
         tableView.reloadData()
         totalCalculator()
         setupRightBarDropDown()
@@ -54,7 +58,11 @@ class VC_Carrito: UIViewController {
             (_) in
             //Confirmado
             self.addToFirebase()
-            productOrder.removeAll()
+            if self.sucursal == "Yumaya" {
+                productOrderYumaya.removeAll()
+            } else if self.sucursal == "Ipsum" {
+                productOrderIpsum.removeAll()
+            }
             productDict.removeAll()
             self.items.removeAll()
             self.tableView.reloadData()
@@ -191,7 +199,11 @@ extension VC_Carrito: UITableViewDataSource {
         if editingStyle == .delete {
             self.total -= self.items[indexPath.row].price
             self.items.remove(at: indexPath.row)
-            productOrder.remove(at: indexPath.row)
+            if self.sucursal == "Yumaya" {
+                productOrderYumaya.remove(at: indexPath.row)
+            } else if self.sucursal == "Ipsum" {
+                productOrderIpsum.remove(at: indexPath.row)
+            }
             productDict.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.removeRightLabel()

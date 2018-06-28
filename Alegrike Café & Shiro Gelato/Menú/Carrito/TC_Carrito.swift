@@ -18,6 +18,29 @@ class CarritoCell: UITableViewCell {
     func setup(product: M_Basket){
         self.nameFInal.text = product.category
         self.priceFinal.text = "$\(product.price)"
-        self.descripcion.text = "\(product.name)    Options: \(product.options ?? "")        Other: \(product.size ?? "")        Extra: \(product.extra ?? "")\n\nCantidad: \(product.quantity)"
+        if (product.options == "" || product.size == "" || product.extra == "") {
+            if (product.size == "") {
+                self.descripcion.text = "\(product.name)\nOpciones: \(product.options ?? "")\nExtra: \(product.extra ?? "")\nCantidad: \(product.quantity)"
+                if (product.extra == "") {
+                    self.descripcion.text = "\(product.name)\nOpciones: \(product.options ?? "")\nCantidad: \(product.quantity)"
+                    if (product.options == ""){
+                        self.descripcion.text = "\(product.name)\nCantidad: \(product.quantity)"
+                    }
+                } else if (product.options == ""){
+                    self.descripcion.text = "\(product.name)\nOtro: \(product.size ?? "")\nExtra: \(product.extra ?? "")\nCantidad: \(product.quantity)"
+                }
+            } else if (product.extra == "") {
+                self.descripcion.text = "\(product.name)\nOpciones: \(product.options ?? "")\nDetalle: \(product.size ?? "")\nCantidad: \(product.quantity)"
+                if (product.options == ""){
+                    self.descripcion.text = "\(product.name)\nCantidad: \(product.quantity)"
+                } 
+            } else if (product.options == ""){
+                self.descripcion.text = "\(product.name)\nDetalle: \(product.size ?? "")\nExtra: \(product.extra ?? "")\nCantidad: \(product.quantity)"
+            } else {
+                self.descripcion.text = "\(product.name)\nCantidad: \(product.quantity)"
+            }
+        } else if (product.options != "" && product.size != "" && product.extra != ""){
+            self.descripcion.text = "\(product.name)\nOpciones: \(product.options ?? "")\nDetalle: \(product.size ?? "")\nExtra: \(product.extra ?? "")\nCantidad: \(product.quantity)"
+        }
     }
 }

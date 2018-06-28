@@ -11,7 +11,8 @@ import Firebase
 import DropDown
 
 var productDict: [[String: Any]] = [[:]]
-var productOrder: [M_Basket] = []
+var productOrderYumaya: [M_Basket] = []
+var productOrderIpsum: [M_Basket] = []
 
 
 @UIApplicationMain
