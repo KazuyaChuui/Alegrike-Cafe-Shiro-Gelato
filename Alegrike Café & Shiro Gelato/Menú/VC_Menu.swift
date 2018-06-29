@@ -143,8 +143,10 @@ extension VC_Menu: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CC_Menu
-        let imageRef = storageRef.child("\(filtered[indexPath.row].name).png")
-        
+        var category = filtered[indexPath.row].name
+        let replacements = ["ñ" : "n", "é" : "e", "ó":"o", "í":"i"]
+        replacements.keys.forEach { category = category.replacingOccurrences(of: $0, with: replacements[$0]!)}
+        let imageRef = storageRef.child("\(category).png")
         cell.setup(product: filtered[indexPath.row], imageRef: imageRef)
         return cell
     }

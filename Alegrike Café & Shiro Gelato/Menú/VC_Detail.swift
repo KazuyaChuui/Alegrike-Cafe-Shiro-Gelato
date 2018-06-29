@@ -64,8 +64,10 @@ class VC_Detail: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = product.name
-        
-        let imageRef = storageRef.child("\(product.name).png")
+        var category = product.name
+        let replacements = ["ñ" : "n", "é" : "e", "ó":"o", "í":"i"]
+        replacements.keys.forEach { category = category.replacingOccurrences(of: $0, with: replacements[$0]!)}
+        let imageRef = storageRef.child("\(category).png")
         imageProduct.sd_setImage(with: imageRef)
         setupDropdowns()
         sucursal = (product.ref?.parent?.key)!
@@ -78,20 +80,17 @@ class VC_Detail: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        qLabel.isHidden = true
-        bLabel.isHidden = true
-        mLabel.isHidden = true
-        sLabel.isHidden = true
+        
         removeRightLabel()
     }
     
     @IBAction func addToCart(_ sender: UIButton) {
-        addtoCartArray()
-        let vc = storyboard?.instantiateViewController(withIdentifier: "canasta") as! VC_Carrito
-        vc.ref = (product.ref?.database.reference())!
-        vc.sucursal = sucursal
-        navigationController?.pushViewController(vc, animated: true)
-        
+        if addSafetyToCart() && limitArray(){
+            let vc = storyboard?.instantiateViewController(withIdentifier: "canasta") as! VC_Carrito
+            vc.ref = (product.ref?.database.reference())!
+            vc.sucursal = sucursal
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func quantityAction(_ sender: UIButton) {
@@ -112,6 +111,46 @@ class VC_Detail: UIViewController {
     
     @IBAction func showBarButtonDropDown(_ sender: AnyObject) {
         rightButtonDropDown.show()
+    }
+    
+    func addSafetyToCart() -> Bool{
+        let alertVC = UIAlertController(title: "Faltan detalles para elegir", message: "", preferredStyle: .alert)
+        let alertActionOkay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertVC.addAction(alertActionOkay)
+        
+        if (qLabel.isHidden || (bLabel.isHidden && !baseBtn.isHidden) || (sLabel.isHidden && !sizeBtn.isHidden) || (mLabel.isHidden && !milkBtn.isHidden)) {
+            self.present(alertVC, animated: true, completion: nil)
+            return false
+        } else {
+            addtoCartArray()
+            return true
+        }
+    }
+    
+    func limitArray() -> Bool{
+        let alertVC = UIAlertController(title: "Solo Puedes agregar 1 articulo mas a la canasta.", message: "", preferredStyle: .alert)
+        let alertActionOkay = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alertVC.addAction(alertActionOkay)
+        let alert = UIAlertController(title: "Cuidado", message: "Ya cuentas con 10 articulos.\nSi deseas pedir mas articulos por favor crea una nueva orden.\n Gracias.", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        
+        var counter = 0
+        
+        if self.sucursal == "Yumaya" {
+            counter = productOrderYumaya.count
+        } else if self.sucursal == "Ipsum" {
+            counter = productOrderIpsum.count
+        }
+        
+        if counter == 8{
+            self.present(alertVC, animated: true, completion: nil)
+            return true
+        } else if counter == 9 {
+            self.present(alert, animated: true, completion: nil)
+            return false
+        }
+        return true
     }
     
     func addtoCartArray(){

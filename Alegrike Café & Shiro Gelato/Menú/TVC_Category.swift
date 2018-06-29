@@ -127,11 +127,10 @@ class TVC_Category: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! TV_CategoryCell
         let imageRef: StorageReference
-        if categories[indexPath.row] == "Café Americano" {
-            imageRef = storageRef.child("Americano.jpg")
-        } else {
-            imageRef = storageRef.child("\(categories[indexPath.row]).jpg")
-        }
+        var category = categories[indexPath.row]
+        let replacements = ["ñ" : "n", "é" : "e", "ó":"o", "í":"i"]
+        replacements.keys.forEach { category = category.replacingOccurrences(of: $0, with: replacements[$0]!)}
+        imageRef = storageRef.child("\(category).jpg")
 
         if menuType == "Caliente" {
             cell.setup(name: categories[indexPath.row], imageRef: imageRef,color: colorsHot[indexPath.row])
